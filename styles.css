@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "Pixel Operator";
+    src: url("/misc/pixel_operator/PixelOperator.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Pixel Operator";
+    src: url("/misc/pixel_operator/PixelOperator-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Pixel Operator HB";
+    src: url("/misc/pixel_operator/PixelOperatorHB.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator HB SC";
+    src: url("/misc/pixel_operator/PixelOperatorHBSC.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator Mono";
+    src: url("/misc/pixel_operator/PixelOperatorMono.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator SC";
+    src: url("/misc/pixel_operator/PixelOperatorSC.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Pixel Operator SC";
+    src: url("/misc/pixel_operator/PixelOperatorSC-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+body {
+    position: relative;
+    font-family: "Pixel Operator", "Courier New", Courier, monospace;
+    background-color: rgb(20, 77, 112);
+    font-size: 16pt;
+    line-height: normal;
+    height: 95vh;
+    z-index: 0;
+}
+
+.card {
+    position: relative;
+    border: 2px solid skyblue;
+    width: 200px;
+    height: 300px;
+    background-color: whitesmoke;
+    padding: 0px;
+    margin: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    z-index: 5;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 128px;
+    height: 128px;
+}
+
+.card.characterCard img {
+    height: 164px;
+    width: auto;
+}
+
+.card p {
+    margin-bottom: 0.25rem;
+}
+
+.card p:nth-of-type(1),
+.label {
+    font-weight: 700;
+}
+
+.card p:nth-of-type(2) {
+    font-size: smaller;
+}
+
+.bg-info {
+    background-color: #5cadc3;
+}
+
+#fullboard {
+    position: relative;
+}
+
+#fullBoard>img {
+    position: absolute;
+    width: auto;
+    overflow-x: hidden;
+    cursor: move;
+}
+
+#fullBoard>img:nth-of-type(1) {
+    height: 100%;
+    width: auto;
+    left: 40%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    cursor: unset;
+}
+
+.twoDecks.card:hover {
+    transform: translateY(0px);
+}
+
+.twoDecks.card {
+    position: absolute;
+    top: 0;
+    width: 160;
+    height: 160;
+    margin: 0;
+    z-index: 4;
+    border-bottom: 4px solid turquoise;
+    background-color: paleturquoise;
+}
+
+#drawArea p:nth-of-type(2) {
+    margin-top: 25px;
+    font-size: smaller;
+    line-height: 1rem;
+}
+
+#drawArea .card {
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+#drawArea .card>img {
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+}

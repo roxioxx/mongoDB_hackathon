@@ -1,0 +1,28 @@
+[{
+        "_id": "Chocolate Mug Cake",
+        "shortname": "mugCake",
+        "tagLine": "Takes 1 minute in the microwave to cook",
+        "link": "https://youtu.be/zHBqUgPEa_0",
+        "writtenIngredients": [
+            "2 tbsp flour",
+            "1 tbsp sugar",
+            "1 tbsp cocoa powder",
+            "1/4 tsp baking powder",
+            "1 tbsp vegetable oil (or any flavorless oil)",
+            "3 tbsp milk",
+            "1 tbsp Nutella (or chocolate chips)"
+        ],
+        "dataIngredients": [
+            "flour",
+            "sugar",
+            "cocoaPowder",
+            "bakingPowder",
+            "oil",
+            "milk",
+            "nutella"
+        ]
+    },
+    {
+        "_id": ""
+    }
+]
