@@ -1,4 +1,4 @@
-import * as Realm from "https://unpkg.com/realm-web/dist/bundle.iife.js"
+import * as Realm from "/realm.js"
 
 const app = new Realm.App({ id: "cookbook-famra" });
 const mongodb = app.currentUser.mongoClient("mongodb-atlas");
