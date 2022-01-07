@@ -1,43 +1,3 @@
-@font-face {
-    font-family: "Pixel Operator";
-    src: url("/misc/pixel_operator/PixelOperator.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Pixel Operator";
-    src: url("/misc/pixel_operator/PixelOperator-Bold.ttf") format("truetype");
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: "Pixel Operator HB";
-    src: url("/misc/pixel_operator/PixelOperatorHB.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Pixel Operator HB SC";
-    src: url("/misc/pixel_operator/PixelOperatorHBSC.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Pixel Operator Mono";
-    src: url("/misc/pixel_operator/PixelOperatorMono.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Pixel Operator SC";
-    src: url("/misc/pixel_operator/PixelOperatorSC.ttf") format("truetype");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Pixel Operator SC";
-    src: url("/misc/pixel_operator/PixelOperatorSC-Bold.ttf") format("truetype");
-    font-weight: 700;
-}
-
 img {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
@@ -46,7 +6,7 @@ img {
 
 body {
     position: relative;
-    font-family: "Pixel Operator", "Courier New", Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     background-color: rgb(20, 77, 112);
     font-size: 16pt;
     line-height: normal;
