@@ -8,10 +8,9 @@ try {
     // Authenticate the user
     const user = await app.logIn(credentials);
     // `App.currentUser` updates to match the logged in user
-    assert(user.id === app.currentUser.id)
+    assert(user.id === app.currentUser.id);
+    console.log(user);
 
 } catch (err) {
     console.error("Failed to log in", err);
 }
-
-console.log(user);
