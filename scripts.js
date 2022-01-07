@@ -1,5 +1,3 @@
-import * as Realm from "realm-web";
-
 const app = new Realm.App({ id: "cookbook-famra" });
 const mongodb = app.currentUser.mongoClient("mongodb-atlas");
 const recipes = mongodb.db("cookbook").collection("recipes");
