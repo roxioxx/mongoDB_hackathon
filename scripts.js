@@ -1,6 +1,9 @@
 import * as Realm from "realm-web";
 
 const app = new Realm.App({ id: "cookbook-famra" });
+const mongodb = app.currentUser.mongoClient("mongodb-atlas");
+const recipes = mongodb.db("cookbook").collection("recipes");
+
 
 // Create an anonymous credential
 const credentials = Realm.Credentials.anonymous();
@@ -14,3 +17,6 @@ try {
 } catch (err) {
     console.error("Failed to log in", err);
 }
+
+const venusFlytrap = await recipes.find();
+console.log("all recipes", venusFlytrap);
