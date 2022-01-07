@@ -10,7 +10,6 @@ try {
     // `App.currentUser` updates to match the logged in user
     assert(user.id === app.currentUser.id)
 
-    return user
 } catch (err) {
     console.error("Failed to log in", err);
 }
