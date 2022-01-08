@@ -1,28 +1,30 @@
-import * as Realm from("./realm.js")
-
-const app = new Realm.App({ id: "cookbook-famra" });
-const mongodb = app.currentUser.mongoClient("mongodb-atlas");
-const recipes = mongodb.db("cookbook").collection("recipes");
-
-
-// Create an anonymous credential
-const credentials = Realm.Credentials.anonymous();
-
+const id = "cookbook-famra";
+const config = { id, };
+const app = new Realm.App(config);
 
 async function connectToDB() {
     try {
-        // Authenticate the user
-        const user = await app.logIn(credentials);
-        // `App.currentUser` updates to match the logged in user
-        assert(user.id === app.currentUser.id);
-        console.log(user);
-
+        const user = await app.logIn(Realm.Credentials.anonymous());
+        return user;
     } catch (err) {
         console.error("Failed to log in", err);
     }
-    const venusFlytrap = await recipes.find();
-    console.log("all recipes", venusFlytrap);
+};
 
-}
 
-connectToDB();
+async function getDBData() {
+    const mongodb = app.currentUser.mongoClient("mongodb-atlas");
+    const recipes = mongodb.db("cookbook").collection("recipes");
+    try {
+        const venusFlytrap = await recipes.find();
+        console.log("all recipes", venusFlytrap);
+        return venusFlytrap;
+    } catch (err) {
+        console.error("No Data Found", err);
+    }
+};
+
+window.addEventListener('load', (event) => {
+    connectToDB();
+    getDBData();
+});
