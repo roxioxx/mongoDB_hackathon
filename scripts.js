@@ -1,3 +1,5 @@
+import * as Realm from("/realm.js")
+
 const app = new Realm.App({ id: "cookbook-famra" });
 const mongodb = app.currentUser.mongoClient("mongodb-atlas");
 const recipes = mongodb.db("cookbook").collection("recipes");
@@ -6,7 +8,8 @@ const recipes = mongodb.db("cookbook").collection("recipes");
 // Create an anonymous credential
 const credentials = Realm.Credentials.anonymous();
 
-function connectToDB(credentials, err) {
+
+async function connectToDB() {
     try {
         // Authenticate the user
         const user = await app.logIn(credentials);
@@ -21,3 +24,5 @@ function connectToDB(credentials, err) {
     console.log("all recipes", venusFlytrap);
 
 }
+
+connectToDB();
