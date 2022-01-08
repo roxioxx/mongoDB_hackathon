@@ -12,22 +12,18 @@ async function connectToDB() {
 };
 
 
+
 async function getDBData() {
     const mongodb = app.currentUser.mongoClient("mongodb-atlas");
     const recipes = mongodb.db("cookbook").collection("recipes");
+    var venusFlytrap = [];
     try {
-        const venusFlytrap = await recipes.find();
+        venusFlytrap = await recipes.find();
         console.log("all recipes", venusFlytrap);
-        return venusFlytrap;
     } catch (err) {
         console.error("No Data Found", err);
     }
-};
-
-
-
-function formatCards(array) {
-    const arr = array.forEach((element) => {
+    venusFlytrap.forEach((element) => {
         //Just Creating the Card for Each
         var node = document.createElement("div"); // Create a <div> node
 
@@ -82,5 +78,5 @@ const nodel = document.getElementById("recipesHere");
 
 window.addEventListener('load', (event) => {
     connectToDB();
-    formatCards(getDBData());
+    getDBData()
 });
