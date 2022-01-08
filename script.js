@@ -19,7 +19,7 @@ async function getDBData() {
     var venusFlytrap = [];
     try {
         venusFlytrap = await recipes.find();
-        console.log("all recipes", venusFlytrap);
+        //console.log("all recipes", venusFlytrap);
     } catch (err) {
         console.error("No Data Found", err);
     }
@@ -70,7 +70,7 @@ async function getDBData() {
         document.getElementById("recipesHere").appendChild(node);
 
         //Sanity Check
-        console.log(element._id);
+        //console.log(element._id);
     })
 };
 
@@ -78,5 +78,6 @@ const nodel = document.getElementById("recipesHere");
 
 window.addEventListener('load', (event) => {
     connectToDB();
-    getDBData()
+    setTimeout(() => { getDBData(), 10 });
+
 });
