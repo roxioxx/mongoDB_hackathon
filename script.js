@@ -78,6 +78,6 @@ const nodel = document.getElementById("recipesHere");
 
 window.addEventListener('load', (event) => {
     connectToDB();
-    setTimeout(() => { getDBData(), 10 });
+    setTimeout(() => { getDBData(), 100 });
 
 });
