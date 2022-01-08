@@ -13,8 +13,8 @@ async function connectToDB() {
 
 
 async function getDBData() {
-    const mongodb = app.currentUser.mongoClient("mongodb-atlas");
-    const recipes = mongodb.db("cookbook").collection("recipes");
+  const mongodb = app.currentUser.mongoClient("mongodb-atlas");
+const recipes = mongodb.db("cookbook").collection("recipes");
     try {
         const venusFlytrap = await recipes.find();
         console.log("all recipes", venusFlytrap);
