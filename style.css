@@ -190,6 +190,7 @@ ul {
 @media only screen and (max-width: 640px) {
     body {
         background-color: lightblue;
+        max-width: 95vh;
     }
     .card {
         min-width: 90%;
