@@ -35,7 +35,7 @@ async function getDBData() {
                 <!-- front content -->
 
                 <div class="card">
-                    <img src="images/${element.shortname}.png">
+                    <img src="img/recipes/${element.shortname}.png">
                     <div class="card-container">
                         <h2>${element._id}</h2>
                         <p>${element.tagLine}</p>
